@@ -1,4 +1,4 @@
-Helm chart for hosting dnsmasq on a Kubernetes cluster. 
+The repository (https://github.com/AbhishekS-NN/dnsmasq-helm), provides helm chart for hosting dnsmasq on a Kubernetes cluster. 
 
 The docker image for dnsmasq will be present in dockerhub(abhiss/dnsmasq:<tag>). 
      
