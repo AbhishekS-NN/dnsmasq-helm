@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: dnsmasq-hosts
+data:
+{{ (.Files.Glob "conf/hosts").AsConfig | indent 2 }}
+
+---
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: dnsmasq-conf
+data:
+{{ (.Files.Glob "conf/dnsmasq.conf").AsConfig | indent 2 }}
+
+---
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: dnsmasq-resolvconf
+data:
+{{ (.Files.Glob "conf/resolv.conf").AsConfig | indent 2 }}

@@ -1,0 +1,3 @@
+ip: <external_ip>
+image: dns
+tag: dnsmasq
