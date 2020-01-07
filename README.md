@@ -4,6 +4,7 @@ Building the dnsmasq Docker:
 - Clone the repo and cd to dnsmasq-helm directory
 - Run the command:
      ``` docker build . -t dns:dnsmasq --build-arg HTTP_PROXY=$http_proxy --build-arg HTTPS_PROXY=$https_proxy --rm --file Dockerfile ```
+
 NOTE: Docker name:tag can be changed in the above command by replacing 'dns:dnsmasq' with the custom name.
 
 Installing Helm chart
