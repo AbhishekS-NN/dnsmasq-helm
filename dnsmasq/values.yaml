@@ -3,9 +3,9 @@ tag: 0.2.0
 imagePullPolicy: IfNotPresent
 
 externalIP:
-  enabled: true
-  ip: 1.1.1.1
+  enabled: false
+  ip: 
 
 imagePullSecret:
-  enabled: true
+  enabled: false
   name: my-docker-secret
