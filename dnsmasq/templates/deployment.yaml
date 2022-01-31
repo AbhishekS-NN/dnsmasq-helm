@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+apiVersion: v1
 kind: Deployment                                          
 metadata:
   name: dnsmasq
@@ -18,9 +18,13 @@ spec:
       labels:
         app: dnsmasq
     spec:
+{{- if .Values.imagePullSecret.enabled }}
+      imagePullSecret:
+      - name: {{ .Values.imagePullSecret.name }}
+{{- end }}
       containers:
         - image: '{{ .Values.image }}:{{ .Values.tag }}'
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: '{{ .Values.imagePullPolicy }}'
           name: dnsmasq
           ports:
             - containerPort: 53
