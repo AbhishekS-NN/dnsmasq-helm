@@ -4,8 +4,10 @@ metadata:
   name: dnsmasq-service
 spec:
   type: ClusterIP
+{{- if .Values.externalIP.enabled }}
   externalIPs:
-  - {{ .Values.ip }}
+  - {{ .Values.externalIP.ip }}
+{{- end }}
   ports:
   - port: 53
     name: dns

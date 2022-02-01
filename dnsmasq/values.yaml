@@ -1,3 +1,11 @@
-ip: <external_ip>
-image: abhiss/dnsmasq
-tag: v1.0
+image: andris741/dnsmasq
+tag: 0.2.0
+imagePullPolicy: IfNotPresent
+
+externalIP:
+  enabled: false
+  ip: 
+
+imagePullSecret:
+  enabled: false
+  name: my-docker-secret
